@@ -17,6 +17,18 @@ if __name__ == '__main__':
     hide_st = c4.checkbox('Hide Streamlit Markers',True)
 
     over_theme = {'txc_inactive': '#FFFFFF'}
+    
+    with st.sidebar.expander('About this app'):
+        st.markdown("""
+        **Sponsored by:** 
+        - Zer Platform Ltd
+        
+        **Data provider**: 
+        - [Simfin](https://simfin.com/)
+        - [Federal Reserve Economic Data](https://fred.stlouisfed.org/)
+        - [Nasdaq Datalink](https://data.nasdaq.com/)
+        - [Investing.com] (https://investpy.readthedocs.io/_info/introduction.html)
+        """)
     #this is the host application, we add children to it and that's it!
     app = HydraApp(
         title='Secure Hydralit Data Explorer',
